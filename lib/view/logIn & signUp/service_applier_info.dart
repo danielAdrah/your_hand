@@ -9,6 +9,7 @@ import '../../common_widgets/textField.dart';
 import '../../common_widgets/textField_area.dart';
 import '../../common_widgets/upper_logo.dart';
 import '../../theme.dart';
+import '../service_applier_main_bottom_bar.dart';
 import '../service_applier_homePage/service_applier_home.dart';
 import 'logIn.dart';
 
@@ -137,7 +138,7 @@ class _ServiceApplierInfoState extends State<ServiceApplierInfo> {
                   onTap: () {
                     Get.to(LogIn(
                       onTap: () {
-                        Get.to(ServiceApplierPage());
+                        Get.to(MainBottomBar());
                       },
                     ));
                   },

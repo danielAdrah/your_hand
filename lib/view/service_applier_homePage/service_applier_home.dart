@@ -4,6 +4,8 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:your_hand/theme.dart';
 
+import '../../common_widgets/primary_button.dart';
+import '../../common_widgets/secondary_button.dart';
 import '../../common_widgets/service_applier_navBar.dart';
 
 class ServiceApplierPage extends StatefulWidget {
@@ -51,7 +53,113 @@ class _ServiceApplierPageState extends State<ServiceApplierPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            showModalBottomSheet(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(50),
+                                    topRight: Radius.circular(50),
+                                  ),
+                                ),
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return Container(
+                                    width: double.infinity,
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 40),
+                                    height: height,
+                                    child: Padding(
+                                      padding: EdgeInsets.only(
+                                        right: 10,
+                                      ),
+                                      child: SingleChildScrollView(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.end,
+                                          children: [
+                                            SizedBox(height: 40),
+                                            Text(
+                                              "طلبات قيد التنفيذ",
+                                              style: TextStyle(
+                                                color: ThemeColor.black,
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                            ),
+                                            SizedBox(height: 40),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.end,
+                                              children: [
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.end,
+                                                  children: [
+                                                    Text(
+                                                      //the name of the customer
+                                                      "داليا",
+                                                      style: TextStyle(
+                                                          color: ThemeColor
+                                                              .primary,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          fontSize: 15),
+                                                    ),
+                                                    SizedBox(height: 10),
+                                                    Text(
+                                                      // the date of the reservation
+                                                      "الحجز يوم الأربعار الساعة العاشرة",
+                                                      style: TextStyle(
+                                                          fontSize: 14,
+                                                          color: ThemeColor
+                                                              .black
+                                                              .withOpacity(
+                                                                  0.5)),
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(width: 8),
+                                                CircleAvatar(
+                                                  backgroundColor:
+                                                      ThemeColor.background,
+                                                  radius: 30,
+                                                ),
+                                              ],
+                                            ),
+                                            SizedBox(height: 40),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                SecondaryButton(
+                                                  height: 50,
+                                                  width: 90,
+                                                  onTap: () {},
+                                                  text: "التفاصيل",
+                                                ),
+                                                SizedBox(width: 8),
+                                                SecondaryButton(
+                                                  height: 50,
+                                                  width: 90,
+                                                  onTap: () {},
+                                                  text: "رفض",
+                                                ),
+                                                SizedBox(width: 8),
+                                                PrimaryButton(
+                                                  onTap: () {},
+                                                  text: "قبول",
+                                                  height: 50,
+                                                  width: 90,
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                });
+                          },
                           child: Container(
                             width: 120,
                             height: 150,
@@ -90,7 +198,113 @@ class _ServiceApplierPageState extends State<ServiceApplierPage> {
                           ),
                         ),
                         InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            showModalBottomSheet(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(50),
+                                    topRight: Radius.circular(50),
+                                  ),
+                                ),
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return Container(
+                                    width: double.infinity,
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 40),
+                                    height: height,
+                                    child: Padding(
+                                      padding: EdgeInsets.only(
+                                        right: 10,
+                                      ),
+                                      child: SingleChildScrollView(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.end,
+                                          children: [
+                                            SizedBox(height: 40),
+                                            Text(
+                                              "طلبات منفذة",
+                                              style: TextStyle(
+                                                color: ThemeColor.black,
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                            ),
+                                            SizedBox(height: 40),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.end,
+                                              children: [
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.end,
+                                                  children: [
+                                                    Text(
+                                                      //the name of the customer
+                                                      "داليا",
+                                                      style: TextStyle(
+                                                          color: ThemeColor
+                                                              .primary,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          fontSize: 15),
+                                                    ),
+                                                    SizedBox(height: 10),
+                                                    Text(
+                                                      // the date of the reservation
+                                                      "الحجز يوم الأربعار الساعة العاشرة",
+                                                      style: TextStyle(
+                                                          fontSize: 14,
+                                                          color: ThemeColor
+                                                              .black
+                                                              .withOpacity(
+                                                                  0.5)),
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(width: 8),
+                                                CircleAvatar(
+                                                  backgroundColor:
+                                                      ThemeColor.background,
+                                                  radius: 30,
+                                                ),
+                                              ],
+                                            ),
+                                            SizedBox(height: 40),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                SecondaryButton(
+                                                  height: 50,
+                                                  width: 90,
+                                                  onTap: () {},
+                                                  text: "التفاصيل",
+                                                ),
+                                                SizedBox(width: 8),
+                                                SecondaryButton(
+                                                  height: 50,
+                                                  width: 90,
+                                                  onTap: () {},
+                                                  text: "رفض",
+                                                ),
+                                                SizedBox(width: 8),
+                                                PrimaryButton(
+                                                  onTap: () {},
+                                                  text: "قبول",
+                                                  height: 50,
+                                                  width: 90,
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                });
+                          },
                           child: Container(
                             width: 120,
                             height: 150,
@@ -129,7 +343,113 @@ class _ServiceApplierPageState extends State<ServiceApplierPage> {
                           ),
                         ),
                         InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            showModalBottomSheet(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(50),
+                                    topRight: Radius.circular(50),
+                                  ),
+                                ),
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return Container(
+                                    width: double.infinity,
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 40),
+                                    height: height,
+                                    child: Padding(
+                                      padding: EdgeInsets.only(
+                                        right: 10,
+                                      ),
+                                      child: SingleChildScrollView(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.end,
+                                          children: [
+                                            SizedBox(height: 40),
+                                            Text(
+                                              "طلبات واردة",
+                                              style: TextStyle(
+                                                color: ThemeColor.black,
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                            ),
+                                            SizedBox(height: 40),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.end,
+                                              children: [
+                                                Column(
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.end,
+                                                  children: [
+                                                    Text(
+                                                      //the name of the customer
+                                                      "داليا",
+                                                      style: TextStyle(
+                                                          color: ThemeColor
+                                                              .primary,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          fontSize: 15),
+                                                    ),
+                                                    SizedBox(height: 10),
+                                                    Text(
+                                                      // the date of the reservation
+                                                      "الحجز يوم الأربعار الساعة العاشرة",
+                                                      style: TextStyle(
+                                                          fontSize: 14,
+                                                          color: ThemeColor
+                                                              .black
+                                                              .withOpacity(
+                                                                  0.5)),
+                                                    ),
+                                                  ],
+                                                ),
+                                                SizedBox(width: 8),
+                                                CircleAvatar(
+                                                  backgroundColor:
+                                                      ThemeColor.background,
+                                                  radius: 30,
+                                                ),
+                                              ],
+                                            ),
+                                            SizedBox(height: 40),
+                                            Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                SecondaryButton(
+                                                  height: 50,
+                                                  width: 90,
+                                                  onTap: () {},
+                                                  text: "التفاصيل",
+                                                ),
+                                                SizedBox(width: 8),
+                                                SecondaryButton(
+                                                  height: 50,
+                                                  width: 90,
+                                                  onTap: () {},
+                                                  text: "رفض",
+                                                ),
+                                                SizedBox(width: 8),
+                                                PrimaryButton(
+                                                  onTap: () {},
+                                                  text: "قبول",
+                                                  height: 50,
+                                                  width: 90,
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                });
+                          },
                           child: Container(
                             width: 120,
                             height: 150,

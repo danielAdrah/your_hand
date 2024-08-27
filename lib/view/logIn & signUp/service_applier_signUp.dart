@@ -8,6 +8,7 @@ import '../../common_widgets/primary_button.dart';
 import '../../common_widgets/textField.dart';
 import '../../common_widgets/upper_logo.dart';
 import '../../theme.dart';
+import 'service_applier_info.dart';
 
 class ServiceApplierSignUp extends StatefulWidget {
   const ServiceApplierSignUp({super.key});
@@ -37,7 +38,7 @@ class _ServiceApplierSignUpSignUpState extends State<ServiceApplierSignUp> {
               FadeInDown(
                 delay: Duration(milliseconds: 320),
                 child: Text(
-                  "إنشاء حساب مقدم خدمة",
+                  "إنشاء حساب مقدم الخدمة",
                   style: TextStyle(
                       color: ThemeColor.black,
                       fontWeight: FontWeight.bold,
@@ -97,8 +98,12 @@ class _ServiceApplierSignUpSignUpState extends State<ServiceApplierSignUp> {
                       ),
                       SizedBox(height: 30),
                       PrimaryButton(
+                        height: 50,
+                        width: 170,
                         text: 'إنشاء حساب',
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(ServiceApplierInfo());
+                        },
                       ),
                     ],
                   ),

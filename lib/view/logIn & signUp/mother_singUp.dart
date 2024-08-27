@@ -3,6 +3,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:your_hand/view/logIn%20&%20signUp/logIn.dart';
 
 import '../../common_widgets/primary_button.dart';
 import '../../common_widgets/textField.dart';
@@ -96,8 +97,12 @@ class _MotherSignUpState extends State<MotherSignUp> {
                       ),
                       SizedBox(height: 30),
                       PrimaryButton(
+                        height: 50,
+                        width: 170,
                         text: 'إنشاء حساب',
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(LogIn(onTap: (){},));
+                        },
                       ),
                     ],
                   ),

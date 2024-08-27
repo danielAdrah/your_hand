@@ -5,9 +5,16 @@ import 'package:flutter/material.dart';
 import '../theme.dart';
 
 class PrimaryButton extends StatelessWidget {
-  PrimaryButton({super.key, required this.text, required this.onTap});
+  PrimaryButton(
+      {super.key,
+      required this.text,
+      required this.onTap,
+      required this.width,
+      required this.height});
   void Function()? onTap;
   final String text;
+  final double width;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +22,8 @@ class PrimaryButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         // padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
-        width: 130,
-        height: 50,
+        width: width,
+        height: height,
         decoration: BoxDecoration(
           color: ThemeColor.primary,
           borderRadius: BorderRadius.circular(15),
@@ -25,7 +32,7 @@ class PrimaryButton extends StatelessWidget {
             child: Text(text,
                 style: TextStyle(
                     color: ThemeColor.white,
-                    fontSize: 15,
+                    fontSize: 20,
                     fontWeight: FontWeight.w500))),
       ),
     );

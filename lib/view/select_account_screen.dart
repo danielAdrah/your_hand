@@ -42,6 +42,8 @@ class SelecetAccount extends StatelessWidget {
               FadeInDown(
                   delay: Duration(milliseconds: 340),
                   child: PrimaryButton(
+                      width: 150,
+                      height: 50,
                       onTap: () {
                         Get.to(MotherSignUp());
                       },
@@ -50,6 +52,8 @@ class SelecetAccount extends StatelessWidget {
               FadeInDown(
                   delay: Duration(milliseconds: 360),
                   child: PrimaryButton(
+                      height: 50,
+                      width: 150,
                       onTap: () {
                         Get.to(ServiceApplierSignUp());
                       },

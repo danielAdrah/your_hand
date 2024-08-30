@@ -8,6 +8,7 @@ import '../../common_widgets/primary_button.dart';
 import '../../common_widgets/textField.dart';
 import '../../common_widgets/textField_area.dart';
 import '../../common_widgets/upper_logo.dart';
+import '../../controller/service_apllier.dart';
 import '../../theme.dart';
 import '../service_applier_main_bottom_bar.dart';
 import '../service_applier_homePage/service_applier_home.dart';
@@ -21,7 +22,14 @@ class ServiceApplierInfo extends StatefulWidget {
 }
 
 class _ServiceApplierInfoState extends State<ServiceApplierInfo> {
+  final controller = Get.put(ServiceApplier());
   TextEditingController nameController = TextEditingController();
+  List<String> services = [
+    "جليسة أطفال",
+    "طبخ",
+    "مدبرة منزل",
+    "منسقة عزائم و حفلات",
+  ];
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -126,17 +134,55 @@ class _ServiceApplierInfoState extends State<ServiceApplierInfo> {
                 ),
                 SizedBox(height: 15),
                 Container(
-                  width: 220,
-                  height: 40,
                   decoration: BoxDecoration(
                       color: ThemeColor.white,
                       borderRadius: BorderRadius.circular(15)),
+                  width: 240,
+                  child: DropdownButton<String>(
+                    borderRadius: BorderRadius.circular(25),
+                    alignment: Alignment.centerRight,
+                    hint: Obx(() => controller.serviceName.value.isEmpty
+                        ? Text(
+                            "اختر خدمة",
+                            style: TextStyle(color: ThemeColor.black),
+                          )
+                        : Text(controller.serviceName.value,
+                            style: TextStyle(color: ThemeColor.black))),
+                    items: services.map((String service) {
+                      return DropdownMenuItem<String>(
+                        value: service,
+                        child: Row(
+                          children: [
+                            Text(
+                              service,
+                              style: TextStyle(color: ThemeColor.black),
+                            ),
+                          ],
+                        ), // Display the category name
+                      );
+                    }).toList(),
+                    iconEnabledColor: Colors.pink,
+                    iconSize: 50,
+                    isExpanded: true,
+                    padding: EdgeInsets.symmetric(horizontal: 12),
+                    underline: Text(
+                      "",
+                      style: TextStyle(color: ThemeColor.white),
+                    ),
+                    onChanged: (String? val) {
+                      if (val != null) {
+                        controller.serviceName.value = val;
+                        // controller.selectedCategoryId.value = val;
+                        // controller.fetchSubcategory();
+                      }
+                    }, //o Implement your logic here when a selection changes
+                  ),
                 ),
                 SizedBox(height: 25),
                 PrimaryButton(
                   text: "إكمال",
                   onTap: () {
-                    Get.to(LogIn(
+                    Get.off(LogIn(
                       onTap: () {
                         Get.to(MainBottomBar());
                       },

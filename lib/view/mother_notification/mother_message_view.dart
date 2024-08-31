@@ -6,14 +6,14 @@ import 'package:get/get.dart';
 
 import '../../theme.dart';
 
-class MessageView extends StatefulWidget {
-  const MessageView({super.key});
+class MotherMessageView extends StatefulWidget {
+  const MotherMessageView({super.key});
 
   @override
-  State<MessageView> createState() => _MessageViewState();
+  State<MotherMessageView> createState() => _MotherMessageViewState();
 }
 
-class _MessageViewState extends State<MessageView> {
+class _MotherMessageViewState extends State<MotherMessageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

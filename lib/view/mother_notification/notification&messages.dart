@@ -5,19 +5,22 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../theme.dart';
-import 'message_view.dart';
-import 'notification_view.dart';
+import '../service_applier_notification/message_view.dart';
+import '../service_applier_notification/notification_view.dart';
+import 'mother_message_view.dart';
 
-class NotificationAndMessage extends StatefulWidget {
-  const NotificationAndMessage({super.key});
+class MotherNotificationAndMessage extends StatefulWidget {
+  const MotherNotificationAndMessage({super.key});
 
   @override
-  State<NotificationAndMessage> createState() => _NotificationAndMessageState();
+  State<MotherNotificationAndMessage> createState() =>
+      _MotherNotificationAndMessageState();
 }
 
-class _NotificationAndMessageState extends State<NotificationAndMessage> {
+class _MotherNotificationAndMessageState
+    extends State<MotherNotificationAndMessage> {
   void _goToMessageTab() {
-    Get.to(MessageView());
+    Get.to(MotherMessageView());
   }
 
   @override

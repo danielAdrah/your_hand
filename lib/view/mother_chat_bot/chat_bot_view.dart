@@ -6,14 +6,14 @@ import 'package:get/get.dart';
 
 import '../../theme.dart';
 
-class MessageView extends StatefulWidget {
-  const MessageView({super.key});
+class ChatBotView extends StatefulWidget {
+  const ChatBotView({super.key});
 
   @override
-  State<MessageView> createState() => _MessageViewState();
+  State<ChatBotView> createState() => _MotherMessageViewState();
 }
 
-class _MessageViewState extends State<MessageView> {
+class _MotherMessageViewState extends State<ChatBotView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +23,7 @@ class _MessageViewState extends State<MessageView> {
         backgroundColor: ThemeColor.primary,
         title: ZoomIn(
           delay: Duration(milliseconds: 150),
-          child: Text('الدردشة',
+          child: Text('المجيب الألي',
               style: TextStyle(color: ThemeColor.white, fontSize: 23)),
         ),
         toolbarHeight: 100,

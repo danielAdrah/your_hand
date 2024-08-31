@@ -2,37 +2,34 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import '../theme.dart';
+import '../../theme.dart';
+import 'mother_chat_bot/chat_bot_view.dart';
+import 'mother_notification/notification&messages.dart';
+import 'mother_services/mother_service_view.dart';
 import 'service_applier_homePage/service_applier_home.dart';
 import 'service_applier_notification/notification&message.dart';
 
-class MainBottomBar extends StatefulWidget {
-  const MainBottomBar({super.key});
+class MotherMainBottomBar extends StatefulWidget {
+  const MotherMainBottomBar({super.key});
 
   @override
-  State<MainBottomBar> createState() => _MainBottomBarState();
+  State<MotherMainBottomBar> createState() => _MotherMainBottomBarState();
 }
 
-class _MainBottomBarState extends State<MainBottomBar> {
+class _MotherMainBottomBarState extends State<MotherMainBottomBar> {
   List<Widget> screens = <Widget>[
     Container(
       width: 500,
       height: 500,
       child: Text("d"),
     ),
-    NotificationAndMessage(),
-    Container(
-        width: 500,
-        height: 500,
-        child: Text("d"),
-        ), //this foe the add button in the middle
-
-    ServiceApplierPage(),
+    MotherNotificationAndMessage(),
+    ChatBotView(),
+    MotherServices(),
     Container(
       width: 500,
       height: 500,
       child: Text("d"),
-    
     ),
   ];
   int selectedTab = 0;
@@ -52,10 +49,7 @@ class _MainBottomBarState extends State<MainBottomBar> {
             showUnselectedLabels: true,
             iconSize: 40,
             type: BottomNavigationBarType.fixed,
-
             unselectedItemColor: ThemeColor.black.withOpacity(0.4),
-            // unselectedIconTheme:
-            //     IconThemeData(color: ThemeColor.black.withOpacity(0.4)),
             currentIndex: selectedTab,
             onTap: (index) {
               goToTab(index);
@@ -71,20 +65,12 @@ class _MainBottomBarState extends State<MainBottomBar> {
                 label: 'الإشعارات',
               ),
               BottomNavigationBarItem(
-                icon: CircleAvatar(
-                  radius: 28,
-                  backgroundColor: ThemeColor.background,
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.pink,
-                    size: 30,
-                  ),
-                ),
-                label: '',
+                icon: Icon(Icons.person, size: 45),
+                label: 'chat bot',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.list),
-                label: 'خدماتي',
+                label: 'الخدمات',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.category_outlined),

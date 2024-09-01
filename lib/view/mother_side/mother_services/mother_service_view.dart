@@ -2,9 +2,11 @@
 
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:your_hand/view/mother_side/mother_services/service_provider_list.dart';
 
-import '../../common_widgets/service_applier_navBar.dart';
-import '../../theme.dart';
+import '../../../common_widgets/service_applier_navBar.dart';
+import '../../../theme.dart';
 import 'services_card.dart';
 
 class MotherServices extends StatefulWidget {
@@ -57,17 +59,40 @@ class _MotherServicesState extends State<MotherServices> {
                   children: [
                     Column(
                       children: [
-                        ServicesCard(onTap: () {}, title: "طبخ"),
+                        ServicesCard(
+                            onTap: () {
+                              Get.to(ServiceProviderList(
+                                appBarTitle: "طبخ",
+                              ));
+                            },
+                            title: "طبخ"),
                         SizedBox(height: 20),
                         ServicesCard(
-                            onTap: () {}, title: "منسقة عزائم و حفلات"),
+                            onTap: () {
+                              Get.to(ServiceProviderList(
+                                appBarTitle: "منسقة عزائم و حفلات",
+                              ));
+                            },
+                            title: "منسقة عزائم و حفلات"),
                       ],
                     ),
                     Column(
                       children: [
-                        ServicesCard(onTap: () {}, title: "جليسة أطفال"),
+                        ServicesCard(
+                            onTap: () {
+                              Get.to(ServiceProviderList(
+                                appBarTitle: "جليسة أطفال",
+                              ));
+                            },
+                            title: "جليسة أطفال"),
                         SizedBox(height: 20),
-                        ServicesCard(onTap: () {}, title: "مدبرة منزل"),
+                        ServicesCard(
+                            onTap: () {
+                              Get.to(ServiceProviderList(
+                                appBarTitle: 'مدبرة منزل',
+                              ));
+                            },
+                            title: "مدبرة منزل"),
                       ],
                     ),
                   ],

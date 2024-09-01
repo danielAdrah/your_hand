@@ -8,7 +8,7 @@ import 'package:your_hand/view/logIn%20&%20signUp/logIn.dart';
 import '../../common_widgets/primary_button.dart';
 import '../../common_widgets/textField.dart';
 import '../../common_widgets/upper_logo.dart';
-import '../mother_main_bottom_bar.dart';
+import '../mother_side/mother_main_bottom_bar.dart';
 import '../../theme.dart';
 
 class MotherSignUp extends StatefulWidget {

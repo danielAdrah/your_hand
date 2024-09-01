@@ -4,16 +4,16 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../theme.dart';
+import '../../../theme.dart';
 
-class MotherMessageView extends StatefulWidget {
-  const MotherMessageView({super.key});
+class ChatBotView extends StatefulWidget {
+  const ChatBotView({super.key});
 
   @override
-  State<MotherMessageView> createState() => _MotherMessageViewState();
+  State<ChatBotView> createState() => _MotherMessageViewState();
 }
 
-class _MotherMessageViewState extends State<MotherMessageView> {
+class _MotherMessageViewState extends State<ChatBotView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +23,7 @@ class _MotherMessageViewState extends State<MotherMessageView> {
         backgroundColor: ThemeColor.primary,
         title: ZoomIn(
           delay: Duration(milliseconds: 150),
-          child: Text('الدردشة',
+          child: Text('المجيب الألي',
               style: TextStyle(color: ThemeColor.white, fontSize: 23)),
         ),
         toolbarHeight: 100,

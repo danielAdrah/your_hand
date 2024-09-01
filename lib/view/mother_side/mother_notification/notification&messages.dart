@@ -4,9 +4,9 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../theme.dart';
-import '../service_applier_notification/message_view.dart';
-import '../service_applier_notification/notification_view.dart';
+import '../../../theme.dart';
+import '../../service_applier_notification/message_view.dart';
+import '../../service_applier_notification/notification_view.dart';
 import 'mother_message_view.dart';
 
 class MotherNotificationAndMessage extends StatefulWidget {

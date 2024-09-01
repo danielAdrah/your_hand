@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../../theme.dart';
+import '../../../theme.dart';
 
 class ServicesCard extends StatelessWidget {
   ServicesCard({super.key, required this.title, required this.onTap});
@@ -19,12 +19,9 @@ class ServicesCard extends StatelessWidget {
             width: 150,
             height: 130,
             decoration: BoxDecoration(
-              // boxShadow: [
-              //   BoxShadow(
-              //     blurRadius: 20,
-              //     color: Color(0XFF12153D),
-              //   ),
-              // ],
+              boxShadow: [
+                BoxShadow(color: ThemeColor.black, blurRadius: 5),
+              ],
               color: ThemeColor.white,
               borderRadius: BorderRadius.circular(15),
             ),

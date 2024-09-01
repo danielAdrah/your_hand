@@ -2,12 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import '../../theme.dart';
+import '../../../theme.dart';
 import 'mother_chat_bot/chat_bot_view.dart';
 import 'mother_notification/notification&messages.dart';
 import 'mother_services/mother_service_view.dart';
-import 'service_applier_homePage/service_applier_home.dart';
-import 'service_applier_notification/notification&message.dart';
 
 class MotherMainBottomBar extends StatefulWidget {
   const MotherMainBottomBar({super.key});
